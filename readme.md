@@ -24,4 +24,10 @@ duration = measure.measureCall(wait, 400); // calling function wait with paramet
 
 measure.report(); //Write all logged entries to measure.logger function, uses console.log by default
 
+// Constains array of logged call,
+measure.results
+// each in the format of 
+// { name: funcionName, duration: callDuration, when: calledWhen };
+
+
 ```
