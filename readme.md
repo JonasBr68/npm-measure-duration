@@ -8,6 +8,9 @@ npm install measure-duration
 
 ## Usage
 
-'' let measure = require("measure-duration");
+```
+let measure = require("measure-duration");
 
 let duration = measure(wait, 500); // calling function wait with parameter 500
+
+```
