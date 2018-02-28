@@ -6,12 +6,6 @@ module.exports = function measureFunction(funcToMeasure, ...args) {
     var result = funcToMeasure(...args);
     let stop = Date.now();
 
-    console.log(funcName + " took: " + (stop - start));
-    if (result == undefined) {
-        console.log(funcName + " did not return a value");
-    }
-    else {
-        console.log(funcName + " returned " + result);
-    }
+    console.log(funcName + " took: " + (stop - start) + "ms");
     return result;
 }
