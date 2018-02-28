@@ -1,0 +1,5 @@
+# VisualStudio Code specific files
+.vscode/
+
+# Only for github
+readme.md
