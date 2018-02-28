@@ -1,0 +1,26 @@
+{
+  "name": "measure-duration",
+  "version": "0.1.0",
+  "description": "Measure duration of JavaScript funcion calls, uses EcmaScript 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasBr68/npm-measure-duration.git"
+  },
+  "keywords": [
+    "profile",
+    "javascript",
+    "measure",
+    "duration",
+    "ecmascript2015"
+  ],
+  "author": "Jonas Brandel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonasBr68/npm-measure-duration/issues"
+  },
+  "homepage": "https://github.com/JonasBr68/npm-measure-duration#readme"
+}
