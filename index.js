@@ -13,5 +13,5 @@ module.exports = function measureFunction(funcToMeasure, ...args) {
     else {
         console.log(funcName + " returned " + result);
     }
-    return stop - start;
+    return result;
 }
