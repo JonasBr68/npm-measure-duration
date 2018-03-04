@@ -1,8 +1,7 @@
 # measure-duration
 
 Simple npm package to measure duration of javascript funcion calls, and log information.
-
-Supports measuring functions returning Promise or measuring an async function
+Supports measuring functions returning Promise or measuring an async functions.
 
 ## Installation
 
