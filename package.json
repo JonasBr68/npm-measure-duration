@@ -15,7 +15,10 @@
     "javascript",
     "measure",
     "duration",
-    "ecmascript2015"
+    "ecmascript2015",
+    "promise",
+    "async",
+    "await"
   ],
   "author": "Jonas Brandel",
   "license": "ISC",
