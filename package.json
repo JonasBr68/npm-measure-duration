@@ -1,6 +1,6 @@
 {
   "name": "measure-duration",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Measure duration of JavaScript funcion calls, uses EcmaScript 2015",
   "main": "index.js",
   "scripts": {

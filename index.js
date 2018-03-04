@@ -13,12 +13,35 @@ module.exports = {
     },
     measureCall(funcToMeasure, ...args) {
         let funcName = funcToMeasure.name;
-        let start = Date.now();
-        var result = funcToMeasure(...args);
-        let stop = Date.now();
-
-        this.report(funcName, (stop - start), Date.now());
-        return result;
+        if (funcToMeasure[Symbol.toStringTag] == "AsyncFunction") {
+            //we are delaing with an async function
+            let start = Date.now();
+            let promise = funcToMeasure(...args);
+            promise.then((result) => {
+                let stop = Date.now();
+                this.report(funcName, (stop - start), Date.now());
+                return result;
+            });
+            return promise;
+        }
+        else {
+            let start = Date.now();
+            var result = funcToMeasure(...args);
+            let stop = Date.now();
+            if (result instanceof Promise) {
+                let promise = result;
+                promise.then((result) => {
+                    let stop = Date.now();
+                    this.report(funcName, (stop - start), Date.now());
+                    return result;
+                });
+                return promise;
+            }
+            else {
+                this.report(funcName, (stop - start), Date.now());
+                return result;
+            }
+        }
     },
     report(funcName, callDuration, calledWhen) {
         if (arguments.length == 0) {
